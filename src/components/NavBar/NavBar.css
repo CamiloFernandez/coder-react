@@ -1,0 +1,28 @@
+.nav{
+  background-color: aliceblue;
+}
+
+.nav__ul{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.nav__li{
+  list-style: none;
+  text-align: center;
+  width: 20rem ;
+  height: 100%;
+  padding: 1rem 0;
+}
+
+.nav__li:hover{
+  background-color: rgb(183, 248, 248);
+}
+
+.nav__link{
+  text-decoration: none;
+  color: black;
+  font-size: 2rem;
+  font-weight: bold;
+}

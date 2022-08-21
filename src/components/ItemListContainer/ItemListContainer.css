@@ -1,0 +1,16 @@
+.item-list-container{
+  width: 90%;
+  height: auto;
+  margin: 1rem auto;
+}
+
+.title{
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.item-list{
+  text-align: center;
+  list-style: none;
+  font-size: 2rem;
+}
