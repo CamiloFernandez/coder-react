@@ -22,16 +22,12 @@ export const ItemCount = (props) => {
   }
 
   return (
-    <div className='product-container'>
-      <img className='img' src= {props.img} alt= {props.alt}/>
-      <h2 className="title">{props.title}</h2>
       <div className="item-count">
-        <p className='text text.stock'>Stock: {props.stock}</p>
-        <p className='text text-count'>Cantidad: {count}</p>
-        <button className='btn btn-sub' onClick={() => sub()}>-</button>
-        <button className='btn btn-add' onClick={() => add()}>+</button> 
-        <button className='btn btn-cart' onClick={() => resetCount()}>Añadir al carrito</button>
+        <p className='item-count-text item-count-stock'>Stock: {props.stock}</p>
+        <p className='item-count-text item-count-count'>Cantidad: {count}</p>
+        <button className='item-count-btn btn-sub' onClick={() => sub()}>-</button>
+        <button className='item-count-btn btn-add' onClick={() => add()}>+</button> 
+        <button className='item-count-btn btn-cart' onClick={() => resetCount()}>Añadir al carrito</button>
       </div>
-    </div>
   )
 }

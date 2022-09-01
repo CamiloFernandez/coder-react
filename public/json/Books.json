@@ -1,0 +1,65 @@
+[
+  {
+    "id": 1,
+    "nombre" : "Harry Potter y la piedra filosofal",
+    "autor" : "J.K Rowling",
+    "genero" : "Fantasia",
+    "editorial" : "Salamandra",
+    "stock" : 8,
+    "img" : "https://books.google.com.ar/books/content?id=2zgRDXFWkm8C&pg=PP1&img=1&zoom=3&hl=en&sig=ACfU3U0QXCxkCmsHBYCkHRDQfplIdcWHhw&w=1280"
+  },
+  {
+    "id": 2,
+    "nombre" : "Harry Potter y la camara secreta",
+    "autor" : "J.K Rowling",
+    "genero" : "Fantasia",
+    "editorial" : "Salamandra",
+    "stock" : 15,
+    "img" : "https://books.google.com.ar/books/content?id=zl13g5uRM4EC&pg=PP1&img=1&zoom=3&hl=en&sig=ACfU3U2uKeE6wERNvu8GNWCoKuTLEOpOeQ&w=1280"
+  },
+  {
+    "id": 3,
+    "nombre" : "Harry Potter y el prisionero de Azkaban",
+    "autor" : "J.K Rowling",
+    "genero" : "Fantasia",
+    "editorial" : "Salamandra",
+    "stock" : 5,
+    "img" : "https://books.google.com.ar/books/content?id=2EaOj7-ozKgC&pg=PP1&img=1&zoom=3&hl=en&sig=ACfU3U0DQQWfVhRnIkgLW4KVJenPJzEPxg&w=1280"
+  },
+  {
+    "id": 4,
+    "nombre" : "Harry Potter y el cáliz de fuego",
+    "autor" : "J.K Rowling",
+    "genero" : "Fantasia",
+    "editorial" : "Salamandra",
+    "stock" : 12,
+    "img" : "https://books.google.com.ar/books/content?id=R2daemCCiF8C&pg=PP1&img=1&zoom=3&hl=en&sig=ACfU3U0m30Vh8isS5SI3hednkns6JgHHTw&w=1280"
+  },
+  {
+    "id": 5,
+    "nombre" : "Harry Potter y la Orden del Fénix",
+    "autor" : "J.K Rowling",
+    "genero" : "Fantasia",
+    "editorial" : "Salamandra",
+    "stock" : 10,
+    "img" : "https://books.google.com.ar/books/content?id=uUOBPgXQtvUC&pg=PP1&img=1&zoom=3&hl=en&sig=ACfU3U3cqmoySFJbG8cBPb2oykY9w3OuiA&w=1280"
+  },
+  {
+    "id": 6,
+    "nombre" : "Harry Potter y el misterio del príncipe",
+    "autor" : "J.K Rowling",
+    "genero" : "Fantasia",
+    "editorial" : "Salamandra",
+    "stock" : 5,
+    "img" : "https://books.google.com.ar/books/content?id=uZDYlfDVYmEC&pg=PP1&img=1&zoom=3&hl=en&sig=ACfU3U1kpudFqqYcHR1ufhKNmtD7pAaKSw&w=1280"
+  },
+  {
+    "id": 7,
+    "nombre" : "Harry Potter y las reliquias de la muerte",
+    "autor" : "J.K Rowling",
+    "genero" : "Fantasia",
+    "editorial" : "Salamandra",
+    "stock" : 11,
+    "img" : "https://books.google.com.ar/books/content?id=Pd4Hy4Y-d9MC&pg=PP1&img=1&zoom=3&hl=en&sig=ACfU3U0C-SU0ncDkYQLRC9TJBAs-MFhzOA&w=1280"
+  }
+]
