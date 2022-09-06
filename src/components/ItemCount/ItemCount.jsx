@@ -23,11 +23,13 @@ export const ItemCount = (props) => {
 
   return (
       <div className="item-count">
-        <p className='item-count-text item-count-stock'>Stock: {props.stock}</p>
-        <p className='item-count-text item-count-count'>Cantidad: {count}</p>
-        <button className='item-count-btn btn-sub' onClick={() => sub()}>-</button>
-        <button className='item-count-btn btn-add' onClick={() => add()}>+</button> 
-        <button className='item-count-btn btn-cart' onClick={() => resetCount()}>Añadir al carrito</button>
+        <p className='item-count-text'>Cantidad: {count}</p>
+        <div className='item-count-container-btn'>
+          <button className='item-count-btn btn-sub' onClick={() => sub()}>-</button>
+          <button className='item-count-btn btn-add' onClick={() => add()}>+</button> 
+          <button className='item-count-btn btn-cart' onClick={() => resetCount()}>Añadir al carrito</button>
+        </div>
+        
       </div>
   )
 }

@@ -1,7 +1,6 @@
 import { useState, useEffect } from 'react'
 import './ItemListContainer.css'
 import { ItemList } from '../ItemList/ItemList'
-import { ItemCount } from '../ItemCount/ItemCount'
 
 
 export const ItemListContainer = (props) => {

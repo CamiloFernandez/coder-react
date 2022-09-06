@@ -1,17 +1,17 @@
-import React from 'react'
 import './Item.css'
-import { ItemCount } from '../ItemCount/ItemCount'
+import {Link} from 'react-router-dom'
 
 export const Item = (props) => {
-  return (
-    <>
+  return ( 
       <ul className='item'>
-        <li><img className='item__img' src={props.img}/></li>
+        <li><img className='item__img' src={props.img} alt='Imagen del producto'/></li>
         <li className='item__title'>{props.name}</li>
         <li className='item__text'>Autor: {props.autor}</li>
         <li className='item__text'>Género: {props.genres}</li>
-        <ItemCount className='item__count' stock={props.stock}/>
+        <li className={props.stock > 0 ? 'item__stock-true' : 'item__stock-false'}>{props.stock > 0 ? "En Stock" : "Sin Stock"}</li>
+        <Link to={'/books/' + props.id}>
+          <button disabled={props.stock > 0 ? false : true} className='btn'>Ver Detalles</button>
+        </Link>
       </ul>
-    </>
   )
 }

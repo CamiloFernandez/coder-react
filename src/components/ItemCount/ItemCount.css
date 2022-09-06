@@ -1,29 +1,31 @@
 .item-count{
-  display: grid;
-  width: 100%;
+  position: absolute;
+  bottom: 1px;
+  right: 8.7rem;
+  align-self: flex-end;
+  width: 20rem;
   height: 15rem;
-  grid-template-columns: repeat(2,1fr);
-  padding: .5rem;
+  margin: 0 auto;
+  padding: 1rem;
   text-align: center;
   border-radius: 10px;
+ 
+}
+
+.item-count-container-btn{
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  gap: 1rem;
   grid-template-areas: 
-  "text-stock text-count"
   "btn-sub btn-add"
   "btn-cart btn-cart";
 }
 
 .item-count-text{
   font-size: 1.3rem;
-  margin: .3rem;
+  margin: .5rem;
   font-weight: bold;
-}
 
-.item-count-text-stock{
-  grid-area: text-stock;
-}
-
-.item-count-text-count{
-  grid-area: text-count;
 }
 
 .item-count-btn{
@@ -46,16 +48,19 @@
 }
 
 .btn-sub{
-  background-color: red;
+  color: rgb(101, 2, 2);
   grid-area: btn-sub;
+  font-size: 3rem;
 }
 
 .btn-add{
-  background-color: green;
+  color: rgb(1, 62, 1);
   grid-area: btn-add;
+  font-size: 3rem;
 }
 
 .btn-cart{
   grid-area: btn-cart;
-  width: 16.5rem;
+  width: 17.5rem;
+  margin-top: 1rem auto;
 }
