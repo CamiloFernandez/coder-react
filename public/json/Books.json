@@ -76,5 +76,16 @@
     "stock" : 11,
     "img" : "https://books.google.com.ar/books/content?id=Pd4Hy4Y-d9MC&pg=PP1&img=1&zoom=3&hl=en&sig=ACfU3U0C-SU0ncDkYQLRC9TJBAs-MFhzOA&w=1280",
     "sinopsis" : "Harry Potter y las reliquias de la muerte es el séptimo y último volumen de la ya clásica serie fantástica de la autora británica J.K. Rowling. «Entregadme a Harry Potter -dijo la voz de Voldemort- y nadie sufrirá ningún daño. Entregadme a Harry Potter y dejaré el colegio intacto. Entregadme a Harry Potter y seréis recompensados.» Cuando se monta en el sidecar de la moto de Hagrid y se eleva en el cielo, dejando Privet Drive por última vez, Harry Potter sabe que lord Voldemort y sus mortífagos se hallan cerca. El encantamiento protector que había mantenido a salvo a Harry se ha roto. El Señor Tenebroso se dedica a aterrorizar a todos los seres queridos de Harry, y, para detenerlo, éste habrá de encontrar y destruir los horrocruxes que quedan. La batalla definitiva debe comenzar..."
+  },
+  {
+    "id": 8,
+    "nombre" : "El extraño caso del doctor Jekyll y el señor Hyde",
+    "autor" : "Robert Louis Stevenson",
+    "genero" : "Terror",
+    "editorial" : "Alba",
+    "precio" : 5000,
+    "stock" : 15,
+    "img" : "https://books.google.com.ar/books/publisher/content?id=nIYdBgAAQBAJ&pg=PP1&img=1&zoom=3&hl=en&sig=ACfU3U2Uz4Mi0JrhCk1yyPVrC2HMuVc02g&w=1280",
+    "sinopsis" : "El dr. Jekyll desarrolla una droga para separar su lado bueno del malo. Es este último lado quien, noche tras noche, toma el control de su personalidad y lo convertirá en el monstruoso señor Hyde. El abogado Utterson intenta descifrar el misterio."
   }
 ]
