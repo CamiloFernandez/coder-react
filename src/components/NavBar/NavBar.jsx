@@ -7,13 +7,13 @@ export const NavBar = () => {
     <nav className="nav">
       <ul className="nav__ul">
         <li className="nav__li">
-          <Link to={'/'} className='nav__link'>Tienda</Link>
+          <Link to={'/books'} className='nav__link'>Tienda</Link>
         </li>
         <li className="nav__li">
-          <a className='nav__link' href="">Sobre Nosotros</a>
+          <Link to={'/books/fantasia'} className='nav__link' href="">Fantasia</Link>
         </li>
         <li className="nav__li">
-          <a className='nav__link' href="">Contactanos</a>
+          <Link to={'/books/terror'} className='nav__link' href="">Terror</Link>
         </li>
         <CartWidget/>
       </ul>
