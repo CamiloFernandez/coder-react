@@ -32,4 +32,17 @@
   font-weight: bold;
 }
 
+.detail__btn-cart{
+  width: 13rem;
+  height: 3rem;
+  border-radius: 10px;
+  color: black;
+  font-size: 2rem;
+  border: 1px solid black;
+  position: absolute;
+  bottom: 70px;
+  right: 12rem;
+  text-align: center;
+}
+
 

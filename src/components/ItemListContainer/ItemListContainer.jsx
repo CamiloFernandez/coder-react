@@ -7,13 +7,12 @@ import { useParams } from 'react-router-dom'
 export const ItemListContainer = (props) => {
 
   const [books, setBooks] = useState([])
-  const [loading, setLoading] = useState(false)
+  const [loading, setLoading] = useState(true)
   const { generos } = useParams()
 
   const getAllBooks = async () => {
     const booksJson = await fetch('./json/Books.json')
     const booksParsed = await booksJson.json()
-    console.log(booksParsed)
     setBooks(booksParsed)
     setLoading(false)
   }
@@ -27,6 +26,7 @@ export const ItemListContainer = (props) => {
   }
 
   useEffect(() => {
+    setLoading(true)
     setTimeout(() => {
       generos ? getGenres() : getAllBooks()
     }, 1000);

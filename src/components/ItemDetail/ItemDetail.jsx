@@ -1,8 +1,17 @@
 import React from 'react'
 import './ItemDetail.css'
 import {ItemCount} from '../ItemCount/ItemCount'
+import { useState } from 'react'
+import { Link } from 'react-router-dom'
 
 export const ItemDetail = (props) => {
+
+  const [showBtn, setshowBtn] = useState(true)
+
+  const onAdd = () =>{
+    setshowBtn(false)
+  }
+
   return (
     <div className='detail'>
       <div>
@@ -15,7 +24,7 @@ export const ItemDetail = (props) => {
         <li className='detail__text'>{props.autor}</li>
         <li className='detail__text'> <span className='detail__span'>Editorial:</span> {props.editorial}</li>
         <li className='detail__text'><span className='detail-span'></span>{props.sinopsis}</li>
-        <ItemCount stock={props.stock}/>
+        {showBtn ? <ItemCount stock={props.stock} onAdd={onAdd}/> : <Link to={'/cart'} className='detail__btn-cart' > Ir al carrito </Link>} 
       </ul>
     </div>
   )
