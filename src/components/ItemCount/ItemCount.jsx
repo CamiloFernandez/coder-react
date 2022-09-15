@@ -2,12 +2,13 @@ import './ItemCount.css'
 
 import React, {useState} from 'react'
 
-export const ItemCount = ({stock, onAdd}) => {
+export const ItemCount = ({stock, onAdd, id}) => {
   const [count, setCount] = useState(1)
 
   const add = () =>{
     if(count < stock){
       setCount(count + 1)
+      console.log(id, count)
     }
   }
 
@@ -23,7 +24,7 @@ export const ItemCount = ({stock, onAdd}) => {
         <div className='item-count-container-btn'>
           <button className='item-count-btn btn-sub' onClick={() => sub()}>-</button>
           <button className='item-count-btn btn-add' onClick={() => add()}>+</button> 
-          <button className='item-count-btn btn-cart' onClick={() => onAdd()}>Añadir al carrito</button>
+          <button className='item-count-btn btn-cart' onClick={() => onAdd(id, count)}>Añadir al carrito</button>
         </div>
         
       </div>

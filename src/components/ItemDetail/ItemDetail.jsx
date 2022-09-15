@@ -3,13 +3,16 @@ import './ItemDetail.css'
 import {ItemCount} from '../ItemCount/ItemCount'
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
+import { useCartConstext } from '../context/CartContext'
 
 export const ItemDetail = (props) => {
-
   const [showBtn, setshowBtn] = useState(true)
 
-  const onAdd = () =>{
+  const {addItem} = useCartConstext()
+
+  const onAdd = (id, count) =>{
     setshowBtn(false)
+    addItem(id, count)
   }
 
   return (
@@ -24,7 +27,7 @@ export const ItemDetail = (props) => {
         <li className='detail__text'>{props.autor}</li>
         <li className='detail__text'> <span className='detail__span'>Editorial:</span> {props.editorial}</li>
         <li className='detail__text'><span className='detail-span'></span>{props.sinopsis}</li>
-        {showBtn ? <ItemCount stock={props.stock} onAdd={onAdd}/> : <Link to={'/cart'} className='detail__btn-cart' > Ir al carrito </Link>} 
+        {showBtn ? <ItemCount stock={props.stock} id={props.id} onAdd={onAdd}/> : <Link to={'/cart'} className='detail__btn-cart' > Ir al carrito </Link>} 
       </ul>
     </div>
   )
