@@ -26,6 +26,6 @@ export const ItemDetailContainer = () => {
   }, [])
 
   return (
-    loading ? <Loading/> : <ItemDetail name={details.nombre} autor={details.autor} stock={details.stock} sinopsis={details.sinopsis} img={details.img} editorial={details.editorial} price={details.precio} id={details.id}/>
+    loading ? <Loading/> : <ItemDetail name={details.name} autor={details.autor} stock={details.stock} sinopsis={details.synopsis} img={details.img} editorial={details.editorial} price={details.price} id={details.id}/>
   )
 }

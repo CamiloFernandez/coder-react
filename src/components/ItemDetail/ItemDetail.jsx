@@ -12,7 +12,7 @@ export const ItemDetail = (props) => {
 
   const onAdd = (id, count) =>{
     setshowBtn(false)
-    addItem(id, count)
+    addItem(id, count, props)
   }
 
   return (

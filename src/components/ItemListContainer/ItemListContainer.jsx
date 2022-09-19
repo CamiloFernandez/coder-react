@@ -20,7 +20,7 @@ export const ItemListContainer = (props) => {
   const getGenres = async () => {
     const booksJson = await fetch('./../json/Books.json')
     const booksParsed = await booksJson.json()
-    const booksGenres = await booksParsed.filter(book => book.genero === generos)
+    const booksGenres = await booksParsed.filter(book => book.genre === generos)
     setBooks(booksGenres)
     setLoading(false)
   }
@@ -33,8 +33,8 @@ export const ItemListContainer = (props) => {
   }, [generos])
 
   return (
-    loading ? <Loading /> : <main className='item-list-container'>
+    loading ? <Loading /> : <div className='item-list-container'>
       <ItemList books={books} />
-    </main>
+    </div>
   )
 }

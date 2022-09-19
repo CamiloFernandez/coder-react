@@ -6,7 +6,7 @@ export const ItemList = ({books}) => {
     <>
       {books.map(book =>{
         return(
-          <Item key={book.id} name={book.nombre} autor={book.autor} genres={book.genero} stock={book.stock} img={book.img} id={book.id}/>
+          <Item key={book.id} name={book.name} autor={book.autor} genres={book.genre} stock={book.stock} img={book.img} id={book.id}/>
         )
       })}
     </>

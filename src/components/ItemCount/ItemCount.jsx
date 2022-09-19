@@ -8,7 +8,6 @@ export const ItemCount = ({stock, onAdd, id}) => {
   const add = () =>{
     if(count < stock){
       setCount(count + 1)
-      console.log(id, count)
     }
   }
 
