@@ -3,26 +3,31 @@ import './ItemDetailContainer.css'
 import { useParams } from 'react-router-dom'
 import { ItemDetail } from '../ItemDetail/ItemDetail'
 import { Loading } from '../Loading/Loading'
+import { doc, getDoc } from 'firebase/firestore'
+import { db } from '../../firestore/firestore'
 
 export const ItemDetailContainer = () => {
   const { id } = useParams()
 
   const [details, setDetails] = useState({})
   const [loading, setLoading] = useState(true)
-  const getBook = async () => {
-    const booksJson = await fetch('../../json/Books.json')
-    const booksArray = await booksJson.json()
-    const bookFind = await booksArray.find((book => 
-      { return book.id === Number(id);
-      }))
-    setDetails(bookFind)
-    setLoading(false)
-  }
+
+  const getBook = async (idItem) => {
+    try {
+        setLoading(true)
+        const document = doc(db, "Books", idItem)
+        const response = await getDoc(document)
+        const result = { id: response.id, ...response.data() }
+        setDetails(result)
+        setLoading(false)
+        console.log('pues sí')
+    } catch (error) {
+        console.log(error)
+    }
+}
 
   useEffect(() => {
-    setTimeout(() => {
-      getBook()
-    }, 1000);
+      getBook(id)
   }, [])
 
   return (

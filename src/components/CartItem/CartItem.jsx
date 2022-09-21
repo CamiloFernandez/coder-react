@@ -5,12 +5,9 @@ import './CartItem.css'
 export const CartItem = ({id, amount, name, autor, price, editorial, img}) => {
 
   const {subItem} = useCartConstext()
-
   useEffect(() => {
-
   }, [])
   
-
   return (
     <div className='cart-item'>
         <img className='cart-item__img' src={img} alt={name} />
