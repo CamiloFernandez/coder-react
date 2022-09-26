@@ -6,13 +6,13 @@ import './Cart.css'
 
 export const Cart = () => {
 
-  const {cartList, total, clearCart} = useCartConstext()
+  const {cartList, total} = useCartConstext()
 
   return (
     total === 0 ? 
-    <div className='cart__empy'>
-      <h2 className='cart__empy-title'>No hay articulos en el carrito</h2>
-      <Link to='/books' ><button className='cart__empy-btn'>Ir a Comprar</button></Link>
+    <div className='cart__empty'>
+      <h2 className='cart__empty-title'>No hay articulos en el carrito</h2>
+      <Link to='/' ><button className='cart__empty-btn'>Ir a Comprar</button></Link>
     </div> :
     <div className='cart'>
       {cartList.map(item =>{
@@ -22,7 +22,8 @@ export const Cart = () => {
       }) }  
       <li className='cart__buy-container'>
         <ul><h2 className='cart__total-price'>Total:${total}</h2></ul>
-        <ul><button className='cart__buy-btn' onClick={()=> clearCart()} >Finalizar Compra</button></ul>
+        <ul><Link to={'/cart/checkout'}><button>Finalizar compra</button></Link></ul>
+        
       </li>
     </div>
   )

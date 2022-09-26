@@ -1,9 +1,12 @@
 .nav{
+  display: flex;
+  justify-content: space-around;
   background-color: aliceblue;
   position: sticky;
   top:0 ;
   z-index: 10 ;
-
+  height: 4rem;
+  overflow: visible;
 }
 
 .nav__ul{

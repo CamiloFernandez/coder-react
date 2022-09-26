@@ -5,6 +5,8 @@ import { Loading } from '../Loading/Loading'
 import { useParams } from 'react-router-dom'
 import { db } from '../../firestore/firestore'
 import { collection, getDocs, query, where } from 'firebase/firestore'
+import { cargarBaseDeDatos } from '../../firestore/firestore'
+
 
 export const ItemListContainer = (props) => {
 
@@ -21,14 +23,15 @@ export const ItemListContainer = (props) => {
       const result = col.docs.map((doc) => doc = { id: doc.id, ...doc.data() })
       setBooks(result)
       setLoading(false)
-      console.log(result)
+      console.log(books)
     } catch (error) {
       console.log(error)
     }
   }
 
   useEffect(() => {
-      getBooks(generos)
+    getBooks(generos)
+    
   }, [generos])
 
   return (

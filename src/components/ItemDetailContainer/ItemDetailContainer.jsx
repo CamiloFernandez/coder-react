@@ -20,14 +20,13 @@ export const ItemDetailContainer = () => {
         const result = { id: response.id, ...response.data() }
         setDetails(result)
         setLoading(false)
-        console.log('pues sí')
     } catch (error) {
         console.log(error)
     }
 }
 
   useEffect(() => {
-      getBook(id)
+    getBook(id)
   }, [])
 
   return (
