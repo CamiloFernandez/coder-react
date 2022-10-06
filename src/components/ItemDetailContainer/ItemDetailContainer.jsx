@@ -12,6 +12,8 @@ export const ItemDetailContainer = () => {
   const [details, setDetails] = useState({})
   const [loading, setLoading] = useState(true)
 
+  //Muestra los detalles de un libro trayendolo desde firebase usando como parametro de busqueda su ids
+
   const getBook = async (idItem) => {
     try {
         setLoading(true)
@@ -27,7 +29,7 @@ export const ItemDetailContainer = () => {
 
   useEffect(() => {
     getBook(id)
-  }, [])
+  }, [id])
 
   return (
     loading ? <Loading/> : <ItemDetail name={details.name} autor={details.autor} stock={details.stock} sinopsis={details.synopsis} img={details.img} editorial={details.editorial} price={details.price} id={details.id}/>

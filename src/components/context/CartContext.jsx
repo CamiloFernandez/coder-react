@@ -11,6 +11,8 @@ export const CartProvider = ({ children }) => {
     setCartList([]);
   }
 
+  /*Verifica que el item añadido no se encuentre ya en el carrito, si se encuentra suma la cantidad añadida a la que se encuentra en el carrito y si no simplemente añade el item al carrito*/
+
   const addItem = (id, amount, book) => {
     const inCart = cartList.find(item => item.id === id)
     if (inCart) {
@@ -27,6 +29,8 @@ export const CartProvider = ({ children }) => {
     }
   }
 
+  //Elimina el item del carrito 
+
   const subItem = (id) => {
     const newList = cartList.filter(item => item.id !== id)
     setCartList(newList)
@@ -37,7 +41,7 @@ export const CartProvider = ({ children }) => {
 
 
   return (
-    <cartContext.Provider value={{ cartList, clearCart, addItem, subItem, total, totalItems, clearCart}}>
+    <cartContext.Provider value={{ cartList, clearCart, addItem, subItem, total, totalItems}}>
       {children}
     </cartContext.Provider>
   )

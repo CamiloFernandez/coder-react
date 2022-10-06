@@ -3,11 +3,6 @@ import {Link} from 'react-router-dom'
 
 export const Item = (props) => {
 
-  const prueba = () =>{
-    console.log(props)
-    console.log(typeof(props.id))
-  }
-
   return ( 
       <ul className='item'>
         <li><img className='item__img' src={props.img} alt='Imagen del producto'/></li>

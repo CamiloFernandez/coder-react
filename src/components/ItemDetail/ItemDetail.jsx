@@ -4,6 +4,7 @@ import {ItemCount} from '../ItemCount/ItemCount'
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import { useCartConstext } from '../context/CartContext'
+import Swal from 'sweetalert2'
 
 export const ItemDetail = (props) => {
   const [showBtn, setshowBtn] = useState(true)
@@ -13,6 +14,14 @@ export const ItemDetail = (props) => {
   const onAdd = (id, count) =>{
     setshowBtn(false)
     addItem(id, count, props)
+    Swal.fire({
+      position: 'top-end',
+      icon: 'success',
+      title: `El libro "${props.name}" se agrego al carrito`,
+      showConfirmButton: false,
+      timer: 2000,
+      toast: true
+    })
   }
 
   return (

@@ -1,6 +1,13 @@
 .cart{
   width: 90%;
   margin: auto;
+  margin-top: 4rem;
+}
+
+.cart__title{
+  text-align: center;
+  font-size: 3.2rem;
+  margin-bottom: 4rem;
 }
 
 .cart__empty{
@@ -31,7 +38,7 @@
   box-shadow: 2px 2px 2px black;
 }
 
-.cart__total-price{
+.cart__buy-total{
   text-align: center;
 }
 
@@ -46,8 +53,15 @@
 }
 
 .cart__buy-btn{
+  font-size: 1.5rem;
+  font-weight: bold;
   border: 2px solid black;
   background-color: white;
   padding: 1rem;
   border-radius: 10px;
+}
+
+.cart__buy-btn:hover{
+  transform: translateY(-2px);
+  box-shadow: 2px 2px 2px black;
 }

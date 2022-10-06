@@ -5,14 +5,14 @@ import { Loading } from '../Loading/Loading'
 import { useParams } from 'react-router-dom'
 import { db } from '../../firestore/firestore'
 import { collection, getDocs, query, where } from 'firebase/firestore'
-import { cargarBaseDeDatos } from '../../firestore/firestore'
-
 
 export const ItemListContainer = (props) => {
 
   const [books, setBooks] = useState([])
   const [loading, setLoading] = useState(true)
   const { generos } = useParams()
+
+  //Verifica si se esta pidiendo un genero y si se pide llama solo los libros de ese genero de la db y sino los llama a todos
 
   const getBooks = async (genero) => {
     try {
@@ -23,7 +23,6 @@ export const ItemListContainer = (props) => {
       const result = col.docs.map((doc) => doc = { id: doc.id, ...doc.data() })
       setBooks(result)
       setLoading(false)
-      console.log(books)
     } catch (error) {
       console.log(error)
     }
@@ -31,7 +30,6 @@ export const ItemListContainer = (props) => {
 
   useEffect(() => {
     getBooks(generos)
-    
   }, [generos])
 
   return (

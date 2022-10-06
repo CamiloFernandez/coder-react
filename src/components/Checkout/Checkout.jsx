@@ -1,16 +1,18 @@
 import { addDoc, collection, doc, updateDoc } from 'firebase/firestore'
-import React, { useEffect, useState } from 'react'
+import React from 'react'
 import { useForm } from 'react-hook-form'
 import { useCartConstext } from '../context/CartContext'
 import { db } from '../../firestore/firestore'
 import './Checkout.css'
 import Swal from 'sweetalert2'
+import { Link, useNavigate } from 'react-router-dom'
 
 export const Checkout = () => {
-
   const { register, handleSubmit, formState: { errors } } = useForm()
   const { total, cartList, clearCart } = useCartConstext()
+  const navigate = useNavigate()
 
+  /*Funcion que resive los datos del form, realiza un map sobre los articulos en el carrito para guardarlos en un objeto guardar todo esto en un objeto más grande con todos los datos de la ordern de compra y actualizar el stock de los productos comprados */
   const onSubmit = (data) => {
     const buyer = data
     const items = cartList.map(item => { return { id: item.id, name: item.book.name, price: item.book.price, amount: item.amount } })
@@ -21,20 +23,25 @@ export const Checkout = () => {
     clearCart()
   }
   
+  //genera la order de compra con los datos dados en la funcion onSubmit y le proporciona al usuario el id de la orden
+
   const generateOrder = async (data) => {
     try {
       const col = collection(db, "Orders")
       const order = await addDoc(col, data)
       Swal.fire(
         'Compra Finalizada',
-        `Tu codigo de seguimiento es ${order.id}`,
-        'success',
-        'info',
-      )
+        `Tu codigo de seguimiento es: ${order.id}`,
+        'success'
+      ).then((result)=>{
+        navigate('/');
+      })
     } catch (error) {
       console.log(error)
     }
   }
+
+  //Se encarga de actualizar el stock de los productos comprados
 
   const setUpdate = () => {
     try {
@@ -49,10 +56,11 @@ export const Checkout = () => {
       console.log(error)
     }
   }
-
+  
   return (
+    cartList.length > 0 ? 
     <div className='checkout-container'>
-      <h1 className='checkout__title'>Finalizar compra</h1>
+      <h2 className='checkout__title'>Finalizar compra</h2>
       <h3 className='checkout__subtitle'>Completa los campos:</h3>
       <form onSubmit={handleSubmit(onSubmit)}>
         <div className='checkout__input-container'>
@@ -78,6 +86,10 @@ export const Checkout = () => {
           <input className='checkout__btn' type="submit" value="Enviar" />
         </div>
       </form>
-    </div>
+    </div> :
+    <div className='cart__empty'>
+    <h2 className='cart__empty-title'>No hay articulos en el carrito</h2>
+    <Link to='/' ><button className='cart__empty-btn'>Ir a Comprar</button></Link>
+  </div>
   )
 }
