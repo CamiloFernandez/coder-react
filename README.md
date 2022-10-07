@@ -12,9 +12,16 @@ También utiliza [SweetAlert 2](https://sweetalert2.github.io/) para realizar al
 
 Todos los iconos vienen de [React-icons](https://react-icons.github.io/react-icons)
 
-## Gif del proyecto
+## Imagenes del proyecto
 
-![image](https://firebasestorage.googleapis.com/v0/b/coder-react-15f48.appspot.com/o/GifProyectoCoder.gif?alt=media&token=47b6fb81-a0a1-4a5a-9302-67e0c33c30d2)
+![image](https://firebasestorage.googleapis.com/v0/b/coder-react-15f48.appspot.com/o/img1.png?alt=media&token=3df36451-a7a1-4d99-8d61-239789c3d40f)
+![image](https://firebasestorage.googleapis.com/v0/b/coder-react-15f48.appspot.com/o/img2.png?alt=media&token=82695735-2478-4a47-b856-273213a2f07a)
+![image](https://firebasestorage.googleapis.com/v0/b/coder-react-15f48.appspot.com/o/img3.png?alt=media&token=49ba89da-b2f7-4eba-a40b-ba070ae317e3)
+![image](https://firebasestorage.googleapis.com/v0/b/coder-react-15f48.appspot.com/o/img4.png?alt=media&token=72a53744-ab31-47c2-bcc4-e64906887674)
+![image](https://firebasestorage.googleapis.com/v0/b/coder-react-15f48.appspot.com/o/img5.png?alt=media&token=b0b84c7c-50cf-4fab-8afd-2730aa7ab826)
+
+# Un pequeño Gif del proyecto
+[Gif](https://firebasestorage.googleapis.com/v0/b/coder-react-15f48.appspot.com/o/GifCoder.gif?alt=media&token=0bc509b5-9b8d-497f-8f11-2a15853a139c)
 
 ## Mención especial
 
